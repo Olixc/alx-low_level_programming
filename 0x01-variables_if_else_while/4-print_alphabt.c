@@ -3,7 +3,7 @@
 /**
  * main - Print the lowercase english alphabet without e and q
  *
- * Return: Always 0.
+ * * Return: Always 0.
  */
 int main(void)
 {
@@ -13,7 +13,6 @@ int main(void)
 	{
 		if (i == 113 || i == 101)
 			continue;
-		
 		putchar(i);
 	}
 

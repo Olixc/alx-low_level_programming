@@ -3,7 +3,7 @@
 
 /**
  * add - add two integers
- * @a: value to be added to a 
+ * @a: value to be added to a
  * @b: value to be added to b
  *
  * Return: void

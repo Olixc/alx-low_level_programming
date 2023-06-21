@@ -23,7 +23,12 @@ void jack_bauer(void)
 			{
 				while (l <= 9)
 				{
-					printf("%d%d:%d%d\n", i, j, k, l);
+					_putchar(i + '0');
+					_putchar(j + '0');
+					_putchar(':');
+					_putchar(k + '0');
+					_putchar(l + '0');
+					_putchar('\n');
 					l++;
 				}
 				l = 0;

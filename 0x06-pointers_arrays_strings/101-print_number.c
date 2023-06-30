@@ -12,8 +12,6 @@ void print_number(int n)
 	int hold;
 	int j = 1;
 
-	/*if (n == 0)
-		_putchar('0');*/
 
 	if (n < 0)
 	{
@@ -38,6 +36,7 @@ void print_number(int n)
 	while (j != 0)
 	{
 		int digit = (n / j) % 10;
+
 		_putchar(digit + '0');
 
 		j /= 10;

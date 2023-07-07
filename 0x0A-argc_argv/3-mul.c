@@ -4,7 +4,7 @@
 
 /**
  * main - multiplies two number
- * @argc: To return failure if arg. is != 2.
+ * @argc: To return failure if arg. is != 3.
  * @argv: Where to get the two numbers from.
  *
  * Return: result of two argv(values). i.e
@@ -17,8 +17,8 @@ int main(int argc, char *argv[])
 
 	if (argc != 3)
 	{
-		fprintf(stderr, "Error\n");
-		return (2);
+		printf("Error\n");
+		return (1);
 	}
 
 	while (*ptr)

@@ -1,2 +1,2 @@
-#/bin/bash
-44444444444444444444444444444
+#!/bin/bash
+ar -rc liball.a *.o

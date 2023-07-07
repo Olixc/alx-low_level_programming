@@ -1,5 +1,7 @@
+#include "main.h"
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 #include <ctype.h>
 
 /**
@@ -7,9 +9,9 @@
  * @argc: number of arguments
  * @argv: vector that contains the positive numbers to add.
  *
- * Return: Alwahys zero
+ * Return: Always zero
  */
-int main(int argc __attribute__((unused)), char *argv[])
+int main(int argc __attribute__((__unused__)), char *argv[])
 {
 	int sum = 0;
 	char **ptr = argv + 1;
@@ -18,7 +20,7 @@ int main(int argc __attribute__((unused)), char *argv[])
 	{
 		if (!isdigit(**ptr))
 		{
-			printf("Error\n");
+			puts("Error");
 			return (1);
 		}
 		sum += atoi(*ptr);

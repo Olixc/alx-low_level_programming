@@ -11,7 +11,7 @@
  *
  * Return: Always zero
  */
-int main(int argc __attribute__((__unused__)), char *argv[])
+int main(int argc, char *argv[])
 {
 	int sum = 0;
 	char **ptr = argv + 1;

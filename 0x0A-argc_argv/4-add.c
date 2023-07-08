@@ -1,4 +1,3 @@
-#include "main.h"
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -11,21 +10,35 @@
  *
  * Return: Always zero
  */
-int main(int argc __attribute__((unused)), char *argv[])
+int main(int argc, char *argv[])
 {
-	int sum = 0;
-	char **ptr = argv + 1;
+	int sum, i, j;
 
-	while (*ptr)
+	sum = 0;
+
+	if (argc == 1)
 	{
-		if (!isdigit(**ptr))
-		{
-			puts("Error");
-			return (1);
-		}
-		sum += atoi(*ptr);
-		ptr++;
+		printf("0\n");
+		return (0);
 	}
+
+	for (i = 1; i < argc; i++)
+	{
+		char *arg = argv[i];
+
+		for (j = 0; arg[j] != '\0'; j++)
+		{
+			if (!isdigit(arg[j]))
+			{
+				printf("Error\n");
+				return (1);
+			}
+		}
+
+		sum += atoi(arg);
+	}
+
 	printf("%d\n", sum);
 	return (0);
 }
+

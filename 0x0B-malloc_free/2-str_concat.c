@@ -28,14 +28,20 @@ char *str_concat(char *s1, char *s2)
 	if (concat_str == NULL)
 		return (NULL);
 
-	for (i = 0; i < len1; i++)
+	if (s1)
 	{
-		concat_str[i] = s1[i];
+		for (i = 0; i < len1; i++)
+		{
+			concat_str[i] = s1[i];
+		}
 	}
 
-	for (i = 0; i < len2; i++)
+	if (s2)
 	{
-		concat_str[len1 + i] = s2[i];
+		for (i = 0; i < len2; i++)
+		{
+			concat_str[len1 + i] = s2[i];
+		}
 	}
 
 	concat_str[total_len] = '\0';

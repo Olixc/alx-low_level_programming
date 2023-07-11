@@ -18,9 +18,8 @@ char **strtow(char *str)
 
 	len = strlen(str);
 
-	if (str == NULL || *str == '\0')
+	if (str == NULL || str[0] == '\0' || (str[0] == ' ' && str[1] == '\0'))
 		return (NULL);
-
 	A = malloc(sizeof(char **) * (len + 1));
 
 	if (A == NULL)

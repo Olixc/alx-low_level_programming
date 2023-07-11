@@ -25,15 +25,12 @@ char **strtow(char *str)
 
 	if (A == NULL)
 		return (NULL);
-
 	word = malloc(sizeof(char) * (len + 1));
-
 	if (word == NULL)
 	{
 		free(A);
 		return (NULL);
 	}
-
 	for (i = 0; i < len; i++)
 	{
 		if (str[i] != ' ' && str[i] != '\0')
@@ -45,9 +42,12 @@ char **strtow(char *str)
 			j = 0;
 		}
 	}
-
-	A[++word_count] = NULL;
+	if (j != 0)
+	{
+		word[j] = '\0';
+		A[word_count++] = strdup(word);
+	}
+	A[word_count] = NULL;
 	free(word);
-
 	return (A);
 }

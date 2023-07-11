@@ -21,14 +21,13 @@ char **strtow(char *str)
 	if (str == NULL || *str == '\0')
 		return (NULL);
 
-	A = malloc(4193);
+	A = malloc(sizeof(char **) * (len + 1));
 
 	if (A == NULL)
 		return (NULL);
 	word = malloc(sizeof(char) * (len + 1));
 	if (word == NULL)
 	{
-		free(A);
 		return (NULL);
 	}
 	for (i = 0; i < len; i++)

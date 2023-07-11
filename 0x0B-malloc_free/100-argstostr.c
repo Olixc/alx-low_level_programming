@@ -23,10 +23,8 @@ char *argstostr(int ac, char **av)
 	{
 		len += strlen(av[i]) + 1;
 	}
-	
-	len += ac - 1;
 
-	str_concat = malloc(sizeof(char) * len);
+	str_concat = malloc(sizeof(char) * (len + 1));
 
 	if (str_concat == NULL)
 		return (NULL);

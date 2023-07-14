@@ -1,6 +1,13 @@
 #include <stdlib.h>
 #include "main.h"
 
+/**
+ * *array_range - create an array of integers
+ * @min: min range value.
+ * @max: max range value.
+ *
+ * Return: pointer to a new array
+ */
 int *array_range(int min, int max)
 {
 	int *ptr, i, size;

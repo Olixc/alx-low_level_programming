@@ -7,34 +7,34 @@
  * @name: name param
  * @age: age param
  * @owner: owner param
- *
  * Return: new dog pointer
  */
 dog_t *new_dog(char *name, float age, char *owner)
 {
 	dog_t *dog;
+	int i = 0, j = 0;
 
 	dog = malloc(sizeof(dog_t));
 	if (dog == NULL)
 		return (NULL);
-
 	dog->name = malloc(strlen(name) + 1);
-	/*if (dog->name == NULL)
+	if (dog->name == NULL)
 	{
 		free(dog);
 		return (NULL);
-	}*/
-
+	}
 	dog->owner = malloc(strlen(owner) + 1);
-	/*if (dog->owner == NULL)
+	if (dog->owner == NULL)
 	{
 		free(dog);
 		return (NULL);
-	}*/
-
-	strcpy(dog->name, name);
-	strcpy(dog->owner, owner);
+	}
+	while (name[i++] != '\0')
+		dog->name[i] = name[i];
+	dog->name[i] = '\0';
+	while (owner[j++] != '\0')
+		dog->owner[j] = owner[j];
+	dog->owner[j] = '\0';
 	dog->age = age;
-
 	return (dog);
 }

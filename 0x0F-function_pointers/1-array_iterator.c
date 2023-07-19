@@ -4,6 +4,7 @@
 /**
  * array_iterator - execute function given as parameter
  *	on each element of the array.
+ * @array: The object that contains the integers.
  * @size: size of the array.
  * @action: pointer to the function to use.
  *

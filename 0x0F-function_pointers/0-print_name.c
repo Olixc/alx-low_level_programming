@@ -11,11 +11,5 @@
  */
 void print_name(char *name, void (*f)(char *))
 {
-	char *name_cpy;
-	
-	name_cpy = malloc(sizeof(char) * (strlen(name) + 1));
-
-	strcpy(name_cpy, name);
-
-	f(name_cpy);
+	f(name);
 }

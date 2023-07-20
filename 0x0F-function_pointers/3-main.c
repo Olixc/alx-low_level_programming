@@ -18,7 +18,7 @@ int main(int argc, char *argv[])
 	if (argc != 4)
 	{
 		status = 98;
-		printf("Error argc\n");
+		printf("Error\n");
 		exit(status);
 	}
 
@@ -37,7 +37,7 @@ int main(int argc, char *argv[])
 	if ((op == '/' || op == '%') && arg2 == 0)
 	{
 		status = 100;
-		printf("Error division\n");
+		printf("Error\n");
 		exit(status);
 	}
 

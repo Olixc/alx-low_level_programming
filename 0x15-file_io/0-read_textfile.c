@@ -25,17 +25,29 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	}
 
 	o = open(filename, O_RDONLY);
-	r = read(o, line, letters);
-	w = write(STDOUT_FILENO, line, r);
-
-	if (o == -1 || r == -1 || w == -1 || w != r)
+	if (o == -1)
 	{
 		free(line);
 		return (0);
 	}
+	r = read(o, line, letters);
+	if (r == -1)
+	{
+		free(line);
+		close(o);
+		return (0);
+	}
+	w = write(STDOUT_FILENO, line, r);
+
+	if (w == -1 || w != r)
+	{
+		free(line);
+		close(o);
+		return (0);
+	}
 
 	free(line);
-	close(0);
+	close(o);
 
 	return (w);
 }

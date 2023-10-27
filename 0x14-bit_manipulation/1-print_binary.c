@@ -8,26 +8,24 @@
  */
 void print_binary(unsigned long int n)
 {
-	int size = 0;
-	unsigned long int temp = n;
+	unsigned long int temp;
+	int shifts;
 
 	if (n == 0)
 	{
-		printf("%d", 0);
+		printf("0");
 		return;
 	}
 
-	/* Get the total number of bits*/
-	while ((temp >>= 1) > 0)
-		size++;
+	for (temp = n, shifts = 0; (temp >>= 1) > 0; shifts++)
+		;
 
-	while (size >= 0)
+	for (; shifts >= 0; shifts--)
 	{
-		if ((n >> size) & 1)
+		if ((n >> shifts) & 1)
 			printf("1");
 		else
 			printf("0");
-
-		size--;
 	}
+
 }

@@ -3,6 +3,7 @@
 /**
 * get_bit - get the bit of a number at a specific pos.
 * @index: Position of bit to find
+* @n: Number to find bit in
 *
 * Return: the index position of bit found.
 */
